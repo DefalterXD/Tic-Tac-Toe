@@ -60,7 +60,7 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
 
     let activePlayer = players[0];
 
-    const switchPlayers = () => (activePlayer === players[0]) ? players[1] : players[0];
+    const switchPlayers = () => activePlayer = (activePlayer === players[0]) ? players[1] : players[0];
 
     const printNewRound = () => {
         board.printBoard();
@@ -68,8 +68,8 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
     }
 
     const playRound = (row, column) => {
-        console.log(`${activePlayer.name} play his turn in [${row}][${column}]`)
         board.writeSign(row, column, activePlayer.sign);
+        console.log(`${activePlayer.name} play his turn in [${row}][${column}]`)
 
         switchPlayers();
         printNewRound();
