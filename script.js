@@ -19,12 +19,12 @@ const gameBoard = (function gameBoardModuleControl() {
     for (let row = 0; row < rows; row++) {
         board[row] = [];
         for (let column = 0; column < columns; column++) {
-            // board[row].push(cell());
+            board[row].push(cell());
         }
     }
 
     const printBoard = () => {
-        // const boardWithCellValues = board.map((row) => row.map((cell) => cell.getSign()));
+        const boardWithCellValues = board.map((row) => row.map((cell) => cell.getSign()));
         console.log(boardWithCellValues);
     }
     
