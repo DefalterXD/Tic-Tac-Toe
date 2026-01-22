@@ -54,4 +54,9 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
 
     let activePlayer = players[0];
 
+    const printNewRound = () => {
+        board.printBoard();
+        console.log(`${activePlayer.name}'s turn!`);
+    }
+
 })();
