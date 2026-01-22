@@ -61,4 +61,15 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
         console.log(`${activePlayer.name}'s turn!`);
     }
 
+    const playRound = (row, column) => {
+        console.log(`${activePlayer.name} play his turn in [${row}][${column}]`)
+        board.writeSign(row, column, activePlayer.sign);
+        
+        switchPlayers();
+        printNewRound();
+    }
+
+    return {
+        playRound
+    }
 })();
