@@ -28,6 +28,11 @@ const gameBoard = (function gameBoardModuleControl() {
         console.log(boardWithCellValues);
     }
 
+     const writeSign = (row, column, player) => {
+        
+        board[row][column].addSign(player);
+    }
+
     const getBoard = () => board;
 
     return {
@@ -54,7 +59,7 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
 
     let activePlayer = players[0];
 
-     const switchPlayers = () => (activePlayer === players[0]) ? players[1] : players[0];
+    const switchPlayers = () => (activePlayer === players[0]) ? players[1] : players[0];
 
     const printNewRound = () => {
         board.printBoard();
@@ -64,12 +69,14 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
     const playRound = (row, column) => {
         console.log(`${activePlayer.name} play his turn in [${row}][${column}]`)
         board.writeSign(row, column, activePlayer.sign);
-        
+
         switchPlayers();
         printNewRound();
     }
 
     return {
-        playRound
+        playRound,
+        activePlayer
     }
+
 })();
