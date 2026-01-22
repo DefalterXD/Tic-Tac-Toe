@@ -30,6 +30,8 @@ const gameBoard = (function gameBoardModuleControl() {
 
      const writeSign = (row, column, player) => {
         
+        if (board[row][column].getSign() !== '') return;
+
         board[row][column].addSign(player);
     }
 
