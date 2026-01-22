@@ -27,8 +27,11 @@ const gameBoard = (function gameBoardModuleControl() {
         const boardWithCellValues = board.map((row) => row.map((cell) => cell.getSign()));
         console.log(boardWithCellValues);
     }
+
+    const getBoard = () => board;
     
     return {
-        printBoard
+        printBoard, 
+        getBoard
     }
 })();
