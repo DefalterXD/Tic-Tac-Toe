@@ -37,7 +37,8 @@ const gameBoard = (function gameBoardModuleControl() {
 
     return {
         printBoard,
-        getBoard
+        getBoard,
+        writeSign
     }
 })();
 
