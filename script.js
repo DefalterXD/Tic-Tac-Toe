@@ -49,11 +49,11 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
 
     const players = [
         {
-            player: playerOneName,
+            name: playerOneName,
             sign: 'X'
         },
         {
-            player: playerTwoName,
+            name: playerTwoName,
             sign: 'O'
         }
     ];
