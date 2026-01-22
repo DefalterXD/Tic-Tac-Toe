@@ -9,4 +9,13 @@ const gameBoard = (function gameBoardModuleControl() {
             // board[row].push(cell());
         }
     }
+
+    const printBoard = () => {
+        // const boardWithCellValues = board.map((row) => row.map((cell) => cell.getSign()));
+        console.log(boardWithCellValues);
+    }
+    
+    return {
+        printBoard
+    }
 })();
