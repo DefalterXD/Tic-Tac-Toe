@@ -1,10 +1,10 @@
 const cell = function cellDataForBoard() {
     let sign = '';
-    
+
     const getSign = () => sign;
 
     const addSign = (player) => sign = player;
-    
+
     return {
         getSign,
         addSign
@@ -29,9 +29,29 @@ const gameBoard = (function gameBoardModuleControl() {
     }
 
     const getBoard = () => board;
-    
+
     return {
-        printBoard, 
+        printBoard,
         getBoard
     }
+})();
+
+
+const gameController = (function gameControllerForTheGameLogic(playerOneName = 'Player one', playerTwoName = 'Player two') {
+
+    const board = gameBoard;
+
+    const players = [
+        {
+            player: playerOneName,
+            sign: 'X'
+        },
+        {
+            player: playerTwoName,
+            sign: 'O'
+        }
+    ];
+
+    let activePlayer = players[0];
+
 })();
