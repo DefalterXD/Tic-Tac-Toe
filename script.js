@@ -1,3 +1,16 @@
+const cell = function cellDataForBoard() {
+    let sign = '';
+    
+    const getSign = () => sign;
+
+    const addSign = (player) => sign = player;
+    
+    return {
+        getSign,
+        addSign
+    }
+};
+
 const gameBoard = (function gameBoardModuleControl() {
     const rows = 3;
     const columns = 3;
