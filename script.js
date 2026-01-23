@@ -34,9 +34,14 @@ const gameBoard = (function gameBoardModuleControl() {
         console.log(boardWithCellValues);
     }
 
-     const writeSign = (row, column, player) => {
-        
-        if (board[row][column].getSign() !== '') return;
+    const writeSign = (row, column, player) => {
+
+        if (board[row][column].getSign() !== '') {
+            status.isPlacedRight = false;
+            return;
+        } else {
+            status.isPlacedRight = true;
+        }
 
         board[row][column].addSign(player);
     }
