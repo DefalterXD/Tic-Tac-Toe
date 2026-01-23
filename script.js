@@ -16,6 +16,12 @@ const gameBoard = (function gameBoardModuleControl() {
     const columns = 3;
     const board = [];
 
+    const status = {
+        isPlacedRight: true,
+        isPlayerWon: false,
+        isGameTie: false,
+    };
+
     for (let row = 0; row < rows; row++) {
         board[row] = [];
         for (let column = 0; column < columns; column++) {
