@@ -48,10 +48,13 @@ const gameBoard = (function gameBoardModuleControl() {
 
     const getBoard = () => board;
 
+    const getStatuses = () => status;
+
     return {
         printBoard,
         getBoard,
-        writeSign
+        writeSign,
+        getStatuses
     }
 })();
 
