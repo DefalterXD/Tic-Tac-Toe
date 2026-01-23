@@ -74,6 +74,8 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
         }
     ];
 
+    const boardStatuses = board.getStatuses();
+
     let activePlayer = players[0];
 
     const switchPlayers = () => activePlayer = (activePlayer === players[0]) ? players[1] : players[0];
@@ -87,7 +89,7 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
         board.writeSign(row, column, activePlayer.sign);
         console.log(`${activePlayer.name} play his turn in [${row}][${column}]`)
 
-        switchPlayers();
+        if (boardStatuses.isPlacedRight) switchPlayers();
         printNewRound();
     }
 
