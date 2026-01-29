@@ -91,12 +91,12 @@ const gameBoard = function gameBoardModuleControl() {
         getStatuses,
         checkBoardResult
     }
-})();
+};
 
 
 const gameController = (function gameControllerForTheGameLogic(playerOneName = 'Player one', playerTwoName = 'Player two') {
 
-    const board = gameBoard;
+    const board = gameBoard();
 
     const players = [
         {
