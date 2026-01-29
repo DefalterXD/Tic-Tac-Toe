@@ -11,7 +11,7 @@ const cell = function cellDataForBoard() {
     }
 };
 
-const gameBoard = (function gameBoardModuleControl() {
+const gameBoard = function gameBoardModuleControl() {
     const rows = 3;
     const columns = 3;
     const board = [];
@@ -28,6 +28,22 @@ const gameBoard = (function gameBoardModuleControl() {
             board[row].push(cell());
         }
     }
+    const checkBoardResult = (playerTurn) => {
+        let result = null;
+
+        const boardWinConditions = [
+            [board[0][0], board[0][1], board[0][2]],
+            [board[1][0], board[1][1], board[1][2]],
+            [board[2][0], board[2][1], board[2][2]],
+            [board[0][0], board[1][0], board[2][0]],
+            [board[0][1], board[1][1], board[2][1]],
+            [board[0][2], board[1][2], board[2][2]],
+            [board[0][0], board[1][1], board[2][2]],
+            [board[0][2], board[1][1], board[2][0]]
+        ];
+        
+        return result;
+    };
 
     const printBoard = () => {
         const boardWithCellValues = board.map((row) => row.map((cell) => cell.getSign()));
