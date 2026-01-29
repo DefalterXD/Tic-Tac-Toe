@@ -88,7 +88,8 @@ const gameBoard = function gameBoardModuleControl() {
         printBoard,
         getBoard,
         writeSign,
-        getStatuses
+        getStatuses,
+        checkBoardResult
     }
 })();
 
