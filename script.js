@@ -122,10 +122,20 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
 
     const playRound = (row, column) => {
         board.writeSign(row, column, activePlayer.sign);
-        console.log(`${activePlayer.name} play his turn in [${row}][${column}]`)
-
-        if (boardStatuses.isPlacedRight) switchPlayers();
-        printNewRound();
+        
+        const playerWinner = board.checkBoardResult(activePlayer);
+        if (boardStatuses.isPlayerWon) {
+            board.printBoard();
+            console.log(`${playerWinner.name} is won!`);
+        } else if (boardStatuses.isGameTie) {
+            board.printBoard();
+            console.log('The game is tie!');
+        } 
+        else {
+            console.log(`${activePlayer.name} play his turn in [${row}][${column}]`);
+            if (boardStatuses.isPlacedRight) switchPlayers();
+            printNewRound();
+        }
     }
 
     return {
