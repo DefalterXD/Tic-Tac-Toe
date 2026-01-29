@@ -41,6 +41,13 @@ const gameBoard = function gameBoardModuleControl() {
             [board[0][0], board[1][1], board[2][2]],
             [board[0][2], board[1][1], board[2][0]]
         ];
+
+        boardWinConditions.forEach(row => {
+            if (checkPlayerWin(row, playerTurn.sign)) {
+                status.isPlayerWon = true;
+                result = playerTurn;
+            }
+        });
         
         return result;
     };
