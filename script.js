@@ -48,6 +48,17 @@ const gameBoard = function gameBoardModuleControl() {
                 result = playerTurn;
             }
         });
+
+         for (let row = 0; row < rows; row++) {
+            for (let column = 0; column < columns; column++) {
+                if (board[row][column].getSign() !== '') {
+                    status.isGameTie = true;
+                } else {
+                    status.isGameTie = false;
+                    break;
+                }
+            }
+        }
         
         return result;
     };
