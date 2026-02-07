@@ -151,7 +151,8 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
 
     return {
         playRound,
-        activePlayer
+        getActivePlayer,
+        getBoard: board.getBoard
     }
 
 })();
