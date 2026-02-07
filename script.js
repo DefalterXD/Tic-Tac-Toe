@@ -122,6 +122,8 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
 
     let activePlayer = players[0];
 
+    const getActivePlayer = () => activePlayer;
+
     const switchPlayers = () => activePlayer = (activePlayer === players[0]) ? players[1] : players[0];
 
     const printNewRound = () => {
