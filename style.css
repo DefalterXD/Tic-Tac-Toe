@@ -1,0 +1,65 @@
+body {
+    display: grid;
+    min-height: 100dvh;
+}
+
+.game__container {
+    place-self: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    place-self: center;
+    width: 450px;
+    height: 450px;
+
+    & [data-sign="X"] {
+        color: red;
+    }
+
+    & [data-sign="O"] {
+        color: blue;
+    }
+
+    & .cell {
+        display: grid;
+        font-size: 5rem;
+        place-items: center;
+        cursor: pointer;
+        border-color: black;
+    }
+
+    & .cell:nth-child(1) {
+        border-style: none solid solid none;
+    }
+
+    & .cell:nth-child(2) {
+        border-style: none none solid none;
+    }
+
+    & .cell:nth-child(3) {
+        border-style: none none solid solid;
+    }
+
+    & .cell:nth-child(4) {
+        border-style: none solid none none;
+    }
+
+    & .cell:nth-child(6) {
+        border-style: none none none solid;
+    }
+
+    & .cell:nth-child(7) {
+        border-style: solid solid none none;
+    }
+
+    & .cell:nth-child(8) {
+        border-style: solid none none none;
+    }
+
+    & .cell:nth-child(9) {
+        border-style: solid none none solid;
+    }
+}

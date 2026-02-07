@@ -55,14 +55,17 @@ const gameBoard = function gameBoardModuleControl() {
             }
         });
 
-         for (let row = 0; row < rows; row++) {
+        for (let row = 0, counter = 0; row < rows; row++) {
             for (let column = 0; column < columns; column++) {
                 if (board[row][column].getSign() !== '') {
-                    status.isGameTie = true;
+                    counter++;
                 } else {
-                    status.isGameTie = false;
                     break;
                 }
+            }
+            if (counter === 9) {
+                status.isGameTie = true;
+                break;
             }
         }
         
