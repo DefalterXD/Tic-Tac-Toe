@@ -28,6 +28,12 @@ const gameBoard = function gameBoardModuleControl() {
             board[row].push(cell());
         }
     }
+
+    const checkPlayerWin = (column, playersTurnSign) => {
+        const isWin = column.every(element => element.getSign() === playersTurnSign);
+        return isWin;
+    };
+
     const checkBoardResult = (playerTurn) => {
         let result = null;
 
