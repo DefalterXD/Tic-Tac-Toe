@@ -163,6 +163,29 @@ const screenController = function screenControllerToViewTheGame() {
 
     const game = gameController;
 
+    const screenRender = () => {
+        boardScreen.textContent = '';
+
+        const board = game.getBoard();
+        const activePlayer = game.getActivePlayer(); 
+
+        playerTurnScreen.textContent = `${activePlayer.name} turn now...`
+        
+        board.forEach((row, rowIndex) => {
+            row.forEach((column, columnIndex) => {
+                const cellDiv = document.createElement('div');
+                let activePlayerSign = board[rowIndex][columnIndex].getSign();
+                
+                cellDiv.dataset.row = rowIndex;
+                cellDiv.dataset.column = columnIndex;
+
+                cellDiv.classList.add('cell');
+                cellDiv.textContent = activePlayerSign;
+                cellDiv.dataset.sign = activePlayerSign;
+                boardScreen.appendChild(cellDiv);
+            });
+        });
+    };
 };
 
 screenController();
