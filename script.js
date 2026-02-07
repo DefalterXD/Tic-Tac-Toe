@@ -186,6 +186,22 @@ const screenController = function screenControllerToViewTheGame() {
             });
         });
     };
+
+    const playEventHandler = function playEventHandlerForPlayers(e) {
+        const selectedRow = e.target.dataset.row;
+        const selectedColumn = e.target.dataset.column;
+
+        if (!selectedRow) return;
+        if (!selectedColumn) return;
+
+
+        game.playRound(selectedRow, selectedColumn);
+        screenRender();
+    };
+    boardScreen.addEventListener('click', playEventHandler);
+
+    screenRender();
+
 };
 
 screenController();
