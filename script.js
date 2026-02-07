@@ -156,3 +156,13 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
     }
 
 })();
+
+const screenController = function screenControllerToViewTheGame() {
+    const boardScreen = document.querySelector('.board');
+    const playerTurnScreen = document.querySelector('.playerTurn');
+
+    const game = gameController;
+
+};
+
+screenController();
