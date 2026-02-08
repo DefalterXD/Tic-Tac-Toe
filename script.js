@@ -77,7 +77,7 @@ const gameBoard = function gameBoardModuleControl() {
                 break;
             }
         }
-        
+
         return result;
     };
 
@@ -105,6 +105,7 @@ const gameBoard = function gameBoardModuleControl() {
     return {
         printBoard,
         getBoard,
+        boardReset,
         writeSign,
         getStatuses,
         checkBoardResult
