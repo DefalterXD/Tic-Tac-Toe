@@ -5,6 +5,15 @@ body {
 
 .game__container {
     place-self: center;
+
+    & .again {
+        display: block;
+    }
+
+    & .again.hidden {
+        display: none;
+    }
+
 }
 
 .board {
