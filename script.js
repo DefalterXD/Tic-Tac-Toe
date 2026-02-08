@@ -72,6 +72,7 @@ const gameBoard = function gameBoardModuleControl() {
                     break;
                 }
             }
+            // IF all the cells on the board are not empty
             if (counter === 9) {
                 status.isGameTie = true;
                 break;
