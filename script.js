@@ -159,20 +159,22 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
         const playerWinner = board.checkBoardResult(activePlayer);
         if (boardStatuses.isPlayerWon) {
             board.printBoard();
-            console.log(`${playerWinner.name} is won!`);
+            return { playerWinner: `${playerWinner.name} is win!` };
         } else if (boardStatuses.isGameTie) {
             board.printBoard();
-            console.log('The game is tie!');
-        } 
+            return { isGameTie: 'The game is tie' };
+        }
         else {
-            console.log(`${activePlayer.name} play his turn in [${row}][${column}]`);
+            // console.log(`${activePlayer.name} play his turn in [${row}][${column}]`);
             if (boardStatuses.isPlacedRight) switchPlayers();
             printNewRound();
+            return { nothing: null };
         }
     }
 
     return {
         playRound,
+        gameRestart,
         getActivePlayer,
         getBoard: board.getBoard
     }
