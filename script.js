@@ -230,10 +230,20 @@ const screenController = function screenControllerToViewTheGame() {
 
         if (!selectedRow) return;
         if (!selectedColumn) return;
-
-
-        game.playRound(selectedRow, selectedColumn);
-        screenRender();
+        
+        let boardStatus = game.playRound(selectedRow, selectedColumn);
+        
+        if ('playerWinner' in boardStatus) {
+            screenRender();
+            renderWinner(boardStatus.playerWinner);
+        }
+        else if ('isGameTie' in boardStatus) {
+            screenRender();
+            renderWinner(boardStatus.isGameTie);
+        }
+        else {
+            screenRender();
+        }
     };
     boardScreen.addEventListener('click', playEventHandler);
 
