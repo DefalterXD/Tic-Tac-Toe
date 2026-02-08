@@ -29,6 +29,15 @@ const gameBoard = function gameBoardModuleControl() {
         }
     }
 
+    const boardReset = () => {
+        for (let row = 0; row < rows; row++) {
+            board[row] = [];
+            for (let column = 0; column < columns; column++) {
+                board[row].push(cell());
+            }
+        }
+    };
+
     const checkPlayerWin = (column, playersTurnSign) => {
         const isWin = column.every(element => element.getSign() === playersTurnSign);
         return isWin;
