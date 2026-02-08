@@ -81,11 +81,6 @@ const gameBoard = function gameBoardModuleControl() {
         return result;
     };
 
-    const printBoard = () => {
-        const boardWithCellValues = board.map((row) => row.map((cell) => cell.getSign()));
-        console.log(boardWithCellValues);
-    }
-
     const writeSign = (row, column, player) => {
 
         if (board[row][column].getSign() !== '') {
@@ -103,7 +98,6 @@ const gameBoard = function gameBoardModuleControl() {
     const getStatuses = () => status;
 
     return {
-        printBoard,
         getBoard,
         boardReset,
         writeSign,
@@ -138,7 +132,6 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
 
     const printNewRound = () => {
         board.printBoard();
-        console.log(`${activePlayer.name}'s turn!`);
     };
 
     const gameRestart = () => {
@@ -165,7 +158,6 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
             return { isGameTie: 'The game is tie' };
         }
         else {
-            // console.log(`${activePlayer.name} play his turn in [${row}][${column}]`);
             if (boardStatuses.isPlacedRight) switchPlayers();
             printNewRound();
             return { nothing: null };
