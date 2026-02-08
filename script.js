@@ -184,6 +184,9 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
 const screenController = function screenControllerToViewTheGame() {
     const boardScreen = document.querySelector('.board');
     const playerTurnScreen = document.querySelector('.playerTurn');
+    
+    const playAgainBtn = document.querySelector('.again');
+    document.querySelector('.game__container').appendChild(playAgainBtn);
 
     const game = gameController;
 
@@ -191,15 +194,15 @@ const screenController = function screenControllerToViewTheGame() {
         boardScreen.textContent = '';
 
         const board = game.getBoard();
-        const activePlayer = game.getActivePlayer(); 
+        const activePlayer = game.getActivePlayer();
 
         playerTurnScreen.textContent = `${activePlayer.name} turn now...`
-        
+
         board.forEach((row, rowIndex) => {
             row.forEach((column, columnIndex) => {
                 const cellDiv = document.createElement('div');
                 let activePlayerSign = board[rowIndex][columnIndex].getSign();
-                
+
                 cellDiv.dataset.row = rowIndex;
                 cellDiv.dataset.column = columnIndex;
 
