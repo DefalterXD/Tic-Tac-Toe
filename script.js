@@ -214,6 +214,16 @@ const screenController = function screenControllerToViewTheGame() {
         });
     };
 
+    const renderWinner = (boardStatus) => {
+        playerTurnScreen.textContent = boardStatus;
+        boardScreen.removeEventListener('click', playEventHandler);
+        renderPlayAgainButton();
+    };
+
+    const renderPlayAgainButton = () => {
+        playAgainBtn.classList.toggle('hidden');
+    };
+
     const playEventHandler = function playEventHandlerForPlayers(e) {
         const selectedRow = e.target.dataset.row;
         const selectedColumn = e.target.dataset.column;
