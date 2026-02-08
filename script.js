@@ -130,10 +130,6 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
 
     const switchPlayers = () => activePlayer = (activePlayer === players[0]) ? players[1] : players[0];
 
-    const printNewRound = () => {
-        board.printBoard();
-    };
-
     const gameRestart = () => {
         for (const key in boardStatuses) {
             if (key !== 'isPlacedRight') {
@@ -151,15 +147,12 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
 
         const playerWinner = board.checkBoardResult(activePlayer);
         if (boardStatuses.isPlayerWon) {
-            board.printBoard();
             return { playerWinner: `${playerWinner.name} is win!` };
         } else if (boardStatuses.isGameTie) {
-            board.printBoard();
             return { isGameTie: 'The game is tie' };
         }
         else {
             if (boardStatuses.isPlacedRight) switchPlayers();
-            printNewRound();
             return { nothing: null };
         }
     }
