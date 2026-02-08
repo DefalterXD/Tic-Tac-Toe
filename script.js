@@ -246,7 +246,15 @@ const screenController = function screenControllerToViewTheGame() {
         }
     };
     boardScreen.addEventListener('click', playEventHandler);
-
+    
+    const playAgainHandler = function playAgainHandlerForNewGame() {
+        boardScreen.addEventListener('click', playEventHandler);
+        renderPlayAgainButton();
+        game.gameRestart();
+        screenRender();
+    };
+    playAgainBtn.addEventListener('click', playAgainHandler);
+    
     screenRender();
 
 };
