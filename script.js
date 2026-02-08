@@ -139,11 +139,23 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
     const printNewRound = () => {
         board.printBoard();
         console.log(`${activePlayer.name}'s turn!`);
-    }
+    };
+
+    const gameRestart = () => {
+        for (const key in boardStatuses) {
+            if (key !== 'isPlacedRight') {
+                boardStatuses[key] = false;
+            };
+        }
+
+        activePlayer = players[0];
+
+        board.boardReset();
+    };
 
     const playRound = (row, column) => {
         board.writeSign(row, column, activePlayer.sign);
-        
+
         const playerWinner = board.checkBoardResult(activePlayer);
         if (boardStatuses.isPlayerWon) {
             board.printBoard();
