@@ -253,9 +253,7 @@ const screenController = (function screenControllerToViewTheGame() {
         screenRender();
     };
     playAgainBtn.addEventListener('click', playAgainHandler);
-    
-    screenRender();
 
-};
-
-screenController();
+    // Initially hide the board
+    gameScreenContainerRender();
+})();
