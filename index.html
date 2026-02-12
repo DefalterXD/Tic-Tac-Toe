@@ -12,10 +12,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Press+Start+2P&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
-    <div class="game__container">
+    <div class="counter__container">
         <h2 class="playerOne"></h2>
         <h2 class="playerTwo"></h2>
+    </div>
+    <form action="#" id="playerForm">
+        <h1 class="title">Tic-Tac-Toe</h1>
+        <div class="playerField">
+            <label for="playerOne">Player One Name:</label>
+            <input type="text" id="playerOne" autocomplete="off" placeholder="Player One" autofocus>
+        </div>
+        <div class="playerField">
+            <label for="playerTwo">Player Two Name:</label>
+            <input type="text" id="playerTwo" autocomplete="off" placeholder="Player Two" autofocus>
+        </div>
+        <button type="button" class="playerSubmit">Play</button>
+    </form>
+    <div class="game__container">
         <h1 class="playerTurn"></h1>
         <div class="board"></div>
 
@@ -23,4 +38,5 @@
     </div>
     <script src="./script.js"></script>
 </body>
+
 </html>
