@@ -234,6 +234,17 @@ const screenController = (function screenControllerToViewTheGame() {
         renderPlayAgainButton();
     };
 
+    const playerCountUpScore = (winnerText) => {
+        const winnerName = winnerText.split(' ').slice(0, -3).join(' ');
+        if (winnerName === playerOneField) {
+            playerOneWinCounter++;
+        } else {
+            playerTwoWinCounter++;
+        }
+
+        playerCounterScreenRender();
+    };
+
     const renderPlayAgainButton = () => {
         playAgainBtn.classList.toggle('hidden');
     };
