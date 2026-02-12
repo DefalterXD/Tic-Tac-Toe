@@ -96,6 +96,7 @@ body {
         place-items: center;
         cursor: pointer;
         border-color: black;
+        background: none;
     }
 
     & .cell:nth-child(1) {
@@ -112,6 +113,10 @@ body {
 
     & .cell:nth-child(4) {
         border-style: none solid none none;
+    }
+
+    & .cell:nth-child(5) {
+        border-style: none;
     }
 
     & .cell:nth-child(6) {
