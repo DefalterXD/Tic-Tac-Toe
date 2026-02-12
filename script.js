@@ -167,7 +167,20 @@ const gameController = function gameControllerForTheGameLogic(playerOneName, pla
 
 };
 
-const screenController = function screenControllerToViewTheGame() {
+const screenController = (function screenControllerToViewTheGame() {
+
+    let game;
+    
+    let playerOneField;
+    let playerTwoField;
+    
+    let playerOneWinCounter = 0;
+    let playerTwoWinCounter = 0;
+    
+    const playerForm = document.querySelector('#playerForm');
+    const playSubmitBtn = document.querySelector('.playerSubmit');
+
+    const gameContainer = document.querySelector('.game__container');
     const boardScreen = document.querySelector('.board');
     const playerTurnScreen = document.querySelector('.playerTurn');
     
