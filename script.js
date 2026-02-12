@@ -11,7 +11,7 @@ const cell = function cellDataForBoard() {
     }
 };
 
-const gameBoard = function gameBoardModuleControl() {
+const gameBoard = (function gameBoardModuleControl() {
     const rows = 3;
     const columns = 3;
     const board = [];
@@ -105,7 +105,7 @@ const gameBoard = function gameBoardModuleControl() {
         getStatuses,
         checkBoardResult
     }
-};
+})();
 
 
 const gameController = (function gameControllerForTheGameLogic(playerOneName = 'Player one', playerTwoName = 'Player two') {
