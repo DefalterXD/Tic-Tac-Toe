@@ -199,6 +199,10 @@ const screenController = (function screenControllerToViewTheGame() {
         gameContainer.classList.toggle('hidden');
     };
 
+    const playerCounterScreenRender = () => {
+        playerOneTextCounter.textContent = (playerOneField !== 'Player One') ? `${playerOneField}: ${playerOneWinCounter}` : `Player One: ${playerOneWinCounter}`;
+        playerTwoTextCounter.textContent = (playerTwoField !== 'Player Two') ? `${playerTwoField}: ${playerTwoWinCounter}` : `Player Two: ${playerTwoWinCounter}`;
+    };
 
     const screenRender = () => {
         boardScreen.textContent = '';
