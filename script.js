@@ -188,7 +188,7 @@ const screenController = (function screenControllerToViewTheGame() {
     const playerTwoTextCounter = document.querySelector('.playerTwo');
 
     const playAgainBtn = document.querySelector('.again');
-    document.querySelector('.game__container').appendChild(playAgainBtn);
+    gameContainer.appendChild(playAgainBtn);
 
     const game = gameController;
 
