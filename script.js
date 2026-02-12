@@ -280,17 +280,21 @@ const screenController = (function screenControllerToViewTheGame() {
         }
         else if ('isGameTie' in boardStatus) {
             screenRender();
-            renderWinner(boardStatus.isGameTie);
+            endScreenRender(boardStatus.isGameTie);
         }
         else {
             screenRender();
         }
     };
     boardScreen.addEventListener('click', playEventHandler);
-    
+
     const playAgainHandler = function playAgainHandlerForNewGame() {
         boardScreen.addEventListener('click', playEventHandler);
         renderPlayAgainButton();
+
+        gameScreenRender();
+        gameScreenContainerRender();
+
         game.gameRestart();
         screenRender();
     };
