@@ -249,15 +249,30 @@ const screenController = (function screenControllerToViewTheGame() {
         playAgainBtn.classList.toggle('hidden');
     };
 
+    const playSubmitHandler = function playSubmitHandlerForPlayerNameInputs() {
+        playerOneField = (document.querySelector('#playerOne').value !== '') ? document.querySelector('#playerOne').value : 'Player One';
+        playerTwoField = (document.querySelector('#playerTwo').value !== '') ? document.querySelector('#playerTwo').value : 'Player Two';
+
+        game = gameController(playerOneField, playerTwoField);
+
+        gameScreenRender();
+        gameScreenContainerRender();
+
+        playerCounterScreenRender();
+
+        screenRender();
+    };
+    playSubmitBtn.addEventListener('click', playSubmitHandler);
+
     const playEventHandler = function playEventHandlerForPlayers(e) {
         const selectedRow = e.target.dataset.row;
         const selectedColumn = e.target.dataset.column;
 
         if (!selectedRow) return;
         if (!selectedColumn) return;
-        
+
         let boardStatus = game.playRound(selectedRow, selectedColumn);
-        
+
         if ('playerWinner' in boardStatus) {
             screenRender();
             renderWinner(boardStatus.playerWinner);
