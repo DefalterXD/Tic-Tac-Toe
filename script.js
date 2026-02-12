@@ -214,7 +214,7 @@ const screenController = (function screenControllerToViewTheGame() {
 
         board.forEach((row, rowIndex) => {
             row.forEach((column, columnIndex) => {
-                const cellDiv = document.createElement('div');
+                const cellDiv = document.createElement('button');
                 let activePlayerSign = board[rowIndex][columnIndex].getSign();
 
                 cellDiv.dataset.row = rowIndex;
