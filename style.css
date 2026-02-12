@@ -5,17 +5,38 @@ body {
     font-size: 1.2rem;
 }
 
-.game__container {
+#playerForm {
     place-self: center;
+    position: absolute;
+    top: 25%;
+    display: grid;
+    gap: 24px;
 
-    & .again {
-        display: block;
+
+    &.hidden {
+        visibility: hidden;
     }
 
-    & .again.hidden {
-        display: none;
+    & .title {
+        justify-self: center;
     }
 
+    & .playerField {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    & input {
+        padding: 0.6em;
+        width: 100%;
+        border-radius: 24px;
+    }
+
+    & .playerSubmit {
+        padding: 0.4em 0.6em;
+        border-radius: 24px;
+    }
 }
 
 .board {
