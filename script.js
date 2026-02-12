@@ -108,9 +108,9 @@ const gameBoard = (function gameBoardModuleControl() {
 })();
 
 
-const gameController = (function gameControllerForTheGameLogic(playerOneName = 'Player one', playerTwoName = 'Player two') {
+const gameController = function gameControllerForTheGameLogic(playerOneName, playerTwoName) {
 
-    const board = gameBoard();
+    const board = gameBoard;
 
     const players = [
         {
@@ -165,7 +165,7 @@ const gameController = (function gameControllerForTheGameLogic(playerOneName = '
         getBoard: board.getBoard
     }
 
-})();
+};
 
 const screenController = function screenControllerToViewTheGame() {
     const boardScreen = document.querySelector('.board');
