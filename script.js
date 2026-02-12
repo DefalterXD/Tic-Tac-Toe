@@ -45,6 +45,7 @@ const gameBoard = (function gameBoardModuleControl() {
 
     const checkBoardResult = (playerTurn) => {
         let result = null;
+        const maxOccupiedCells = 9;
 
         const boardWinConditions = [
             [board[0][0], board[0][1], board[0][2]],
@@ -72,8 +73,7 @@ const gameBoard = (function gameBoardModuleControl() {
                     break;
                 }
             }
-            // IF all the cells on the board are not empty
-            if (counter === 9) {
+            if (counter === maxOccupiedCells) {
                 status.isGameTie = true;
                 break;
             }
