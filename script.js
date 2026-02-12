@@ -190,7 +190,15 @@ const screenController = (function screenControllerToViewTheGame() {
     const playAgainBtn = document.querySelector('.again');
     gameContainer.appendChild(playAgainBtn);
 
-    const game = gameController;
+
+    const gameScreenRender = () => {
+        playerForm.classList.toggle('hidden');
+    };
+
+    const gameScreenContainerRender = () => {
+        gameContainer.classList.toggle('hidden');
+    };
+
 
     const screenRender = () => {
         boardScreen.textContent = '';
