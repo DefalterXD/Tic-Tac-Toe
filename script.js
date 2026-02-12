@@ -148,7 +148,7 @@ const gameController = function gameControllerForTheGameLogic(playerOneName, pla
 
         const playerWinner = board.checkBoardResult(activePlayer);
         if (boardStatuses.isPlayerWon) {
-            return { playerWinner: `${playerWinner.name} is win!` };
+            return { playerWinner: `${playerWinner.name} is the winner!` };
         } else if (boardStatuses.isGameTie) {
             return { isGameTie: 'The game is tie' };
         }
