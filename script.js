@@ -228,7 +228,7 @@ const screenController = (function screenControllerToViewTheGame() {
         });
     };
 
-    const renderWinner = (boardStatus) => {
+    const endScreenRender = (boardStatus) => {
         playerTurnScreen.textContent = boardStatus;
         boardScreen.removeEventListener('click', playEventHandler);
         renderPlayAgainButton();
