@@ -39,6 +39,32 @@ body {
     }
 }
 
+.game__container {
+    display: grid;
+    justify-items: center;
+    align-items: start;
+
+    .playerTurn {
+        align-self: center;
+    }
+
+    &.hidden {
+        visibility: hidden;
+    }
+
+    & .again {
+        visibility: visible;
+
+        padding: 0.8em;
+        border-radius: 24px;
+    }
+
+    & .again.hidden {
+        visibility: hidden;
+    }
+
+}
+
 .board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
