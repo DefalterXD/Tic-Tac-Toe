@@ -39,6 +39,14 @@ body {
     }
 }
 
+.counter__container {
+    min-width: 40%;
+    max-height: 100px;
+    place-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
 .game__container {
     display: grid;
     justify-items: center;
