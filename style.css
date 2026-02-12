@@ -90,6 +90,7 @@ body {
     }
 
     & .cell {
+        font-family: 'Press Start 2P', sans-serif;
         display: grid;
         font-size: 5rem;
         place-items: center;
