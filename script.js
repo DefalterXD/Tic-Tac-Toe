@@ -275,7 +275,8 @@ const screenController = (function screenControllerToViewTheGame() {
 
         if ('playerWinner' in boardStatus) {
             screenRender();
-            renderWinner(boardStatus.playerWinner);
+            playerCountUpScore(boardStatus.playerWinner);
+            endScreenRender(boardStatus.playerWinner);
         }
         else if ('isGameTie' in boardStatus) {
             screenRender();
