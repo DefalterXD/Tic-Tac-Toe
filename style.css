@@ -1,4 +1,5 @@
 body {
+    font-family: 'Play', sans-serif;
     display: grid;
     min-height: 100dvh;
 }
