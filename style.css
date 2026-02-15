@@ -67,12 +67,12 @@ body {
     & input {
         padding: 0.6em;
         width: 100%;
-        border-radius: 24px;
+        border-radius: 8px;
     }
 
     & .playerSubmit {
-        padding: 0.4em 0.6em;
-        border-radius: 24px;
+        padding: 1em 0.6em;
+        border-radius: 8px;
     }
 }
 
