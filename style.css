@@ -22,13 +22,28 @@ body {
 #playerForm {
     place-self: center;
     position: absolute;
-    top: 25%;
+    top: 50%;
     display: grid;
     gap: 24px;
-
-
+    
+    
     &.hidden {
         visibility: hidden;
+    }
+    
+    & .title__container {
+        justify-self: center;
+        position: absolute;
+        bottom: 80%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        z-index: -1;
+    }
+
+    & .title__container img {
+        grid-area: 1 / 1 / 1 / 1;
+        width: 500px;
     }
 
     & .title {
