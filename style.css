@@ -73,6 +73,9 @@ body {
     & .playerSubmit {
         padding: 1em 0.6em;
         border-radius: 8px;
+        background: var(--button-color);
+        background-size: 400% 400%;
+        animation: gradient 5s ease infinite;
     }
 }
 
@@ -100,8 +103,11 @@ body {
     & .again {
         visibility: visible;
 
-        padding: 0.8em;
-        border-radius: 24px;
+        padding: 1em;
+        border-radius: 8px;
+        background: var(--button-color);
+        background-size: 400% 400%;
+        animation: gradient 5s ease infinite;
     }
 
     & .again.hidden {
@@ -171,4 +177,16 @@ body {
     & .cell:nth-child(9) {
         border-style: solid none none solid;
     }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
