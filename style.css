@@ -1,3 +1,10 @@
+:root {
+    --playerOne-color: #ec288d;
+    --playerTwo-color: #fdc084;
+    --backgroundBoard-color: #ffd1fd;
+    --button-color: linear-gradient(90deg,rgba(180, 58, 178, 1) 0%, rgba(252, 218, 69, 1) 100%);
+}
+
 body {
     font-family: 'Play', sans-serif;
     display: grid;
