@@ -9,7 +9,14 @@ body {
     font-family: 'Press Start 2P', sans-serif;
     display: grid;
     min-height: 100dvh;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    background: url('./img/pixel_background.png');
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
 }
 
 #playerForm {
