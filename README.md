@@ -24,3 +24,9 @@ In this project I learned:
     <li>Make the module pattering and use of IIFE</li>
     <li>The most import is to separate the game logic with DOM logic to make it modular so we can avoid coupling them</li>
 </ul>
+
+## References:
+
+**The icon for title menu:** https://in.pinterest.com/pin/pixel-art-retro-sunset-icon--201747258302831754/
+
+**The background image(I used pixelation filter):** https://www.freepik.com/free-vector/digital-cyber-grid-lines-geometric-wallpaper-with-laser-light_38091742.htm
