@@ -138,6 +138,7 @@ body {
         font-size: 5rem;
         place-items: center;
         cursor: pointer;
+        border-width: 5px;
         border-color: var(--backgroundBoard-color);
         background: none;
     }
