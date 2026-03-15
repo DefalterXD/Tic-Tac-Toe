@@ -14,7 +14,7 @@ In this project I used what I learned and apply the concepts of closures, factor
 
 The core concept was to make the game only work at console with module pattering and then only add DOM manipulation via the other module. Which incredible helps to wrap the logic around without changing a function where it could affect other functions as well (coupling).
 
-## Lesson Learned:
+## Lessons Learned:
 
 In this project I learned:
 <ul>
